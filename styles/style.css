@@ -1,0 +1,45 @@
+html{
+    font-size: 10px;
+    font-family: "Raleway";
+    font-weight: bold;
+    background-color: #f5f7f8;
+}
+body{
+    background-color: #f5f7f8;
+    color: #333;
+    padding: 20px 0 28px 0;
+    margin: 10px;
+}
+p{
+    font-size: 14px;
+    color: #959595;
+    /* margin: 20px; */
+}
+div{
+    max-width: 650px;
+    padding: 20px;
+    margin: 30px auto;
+    background-color: #f5f7f8;
+    overflow: hidden;
+}
+#top-bar{
+    padding: 17px;
+    margin: 0px auto;
+    color: #444444;
+    font-size: 14px;
+}
+#profile-photo{
+    float: right;
+    width: 50px;
+    height: 50px;
+}
+.post{
+    max-width: 650px;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 10px;
+    background-color: #FFF;
+    vertical-align: middle;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .5);
+    overflow: hidden;
+}
