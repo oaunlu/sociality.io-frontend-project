@@ -1,45 +1,37 @@
 fetch('../data/data.json')
     .then(response => response.json())
     .then(data => {
-        console.log(data.posts_by_date)
-        let posts1 = [data.posts_by_date["2021-06-17"].map(function(p){return p})][0]
-        let posts2 = [data.posts_by_date["2021-07-01"].map(function(p){return p})][0]
-        let posts = [data.posts_by_date]
-        console.log(posts1.length)
-        console.log(posts2.length)
+        let keys = Object.keys(data.posts_by_date).reverse()
+        let posts = Object.values(data.posts_by_date).reverse()
+        console.log(posts[0].map(postTemplate).join(" "))
+
+        function postTemplate(p){
+            var json_date = new Date(p.published_at)
+            var date = json_date.toLocaleDateString('en-GB', {day : 'numeric', month : 'long', year : 'numeric'}) + " - " 
+                     + json_date.toLocaleTimeString('en-GB', {hour: 'numeric', minute: 'numeric'})
+            return `
+                <div class="post">
+                    <p>
+                        ${date}
+                        <br/>
+                        ${p.entry.message}
+                    </p>
+                    <img class="post-photo" src="${p.entry.image[0]}" 
+                        onerror="if (this.src != 'Frontend Developer Project Assets/no-post-image.png') 
+                        this.src = 'Frontend Developer Project Assets/no-post-image.png';">
+                </div>
+            `
+        }
 
         document.getElementById("app").innerHTML = `
-            ${data}
-            ${posts2.map(function (p){
-                return `
-                    <div class="post">
-                        <p>
-                            ${p.published_at}
-                            <br/>
-                            ${p.entry.message}
-                        </p>
-                        <img src="${p.entry.image[0]}">
-                    </div>
-                `
-            }).join(" ")}
-            ${data.posts_by_date}
-            ${posts1.map(function (p){
-                return `
-                    <div class="post">
-                        <p>
-                            ${p.published_at}
-                            <br/>
-                            ${p.entry.message}
-                        </p>
-                        <img src="${p.entry.image[0]}">
-                    </div>
-                `
-            }).join(" ")}
+            <span>
+                ${new Date(keys[0]).toLocaleDateString('en-GB', {day : 'numeric', month : 'long', year : 'numeric'})}
+                ${posts[0].map(postTemplate).join(" ")}
+                ${new Date(keys[1]).toLocaleDateString('en-GB', {day : 'numeric', month : 'long', year : 'numeric'})}
+                ${posts[1].map(postTemplate).join(" ")}
+            </span>
         `  
     })
     .catch(function(error){
         console.error(error);
     });
-
-
-//console.log(posts.posts_by_date["2021-06-17"][0].entry.image[0])
