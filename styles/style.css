@@ -48,6 +48,7 @@ span{
 }
 .side-bar-element{
     margin: 0;
+    font-size: 14px;
     background-color: #393D42;
     color: white;
     text-align: center;
@@ -70,9 +71,13 @@ span{
     width: 50px;
 }
 #top-bar{
-    padding-left: 50px;
+    transition: 0.5s;
+    padding-top: 25px;
+    padding-left: 35px;
+    padding-right: 50px;
     padding-bottom: 0;
     margin: 0%;
+    margin-left: 50px;
     color: #444444;
     font-size: 14px;
 }
@@ -83,9 +88,12 @@ span{
     height: 50px;
 }
 #app{
+    transition: 0.5s;
     margin: 0;
+    margin-left: 50px;
     padding-top: 0;
-    padding-left: 50px;
+    padding-left: 20px;
+    padding-right: 50px;
     vertical-align: middle;
     font-size: 22px;
     /* font-family: "BarlowSemiCondensed"; */
