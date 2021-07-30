@@ -4,8 +4,6 @@ fetch('../data/data.json')
         let keys = Object.keys(data.posts_by_date).reverse()
         let posts = data.posts_by_date
 
-        //console.log(posts["2021-06-17"].map(postTemplate).join(" "))
-
         function sortByDateTemplate(d){
             return `
                 <div class="sort-by-date">
@@ -29,14 +27,24 @@ fetch('../data/data.json')
                         <img class="social-media-img" src="${socialMediaTemplate(p)}">
                     </div>
                         <div class="post-inside">
-                        <p>
-                            ${date}
-                            <br/>
-                            ${p.entry.message.includes("http") ? postTextTemplate(p) : p.entry.message}
-                        </p>
-                        <img class="post-photo" src="${p.entry.image[0]}" 
-                            onerror="if (this.src != 'Frontend Developer Project Assets/no-post-image.png') 
-                            this.src = 'Frontend Developer Project Assets/no-post-image.png';" alt="post-media">
+                            <!--<span class="actions">
+                                <a href="#">
+                                    delete more
+                                </a>
+                            </span>-->
+                            <p>
+                                ${date}
+                                <br/>
+                                ${p.entry.message.includes("http") ? postTextTemplate(p) : p.entry.message}
+                            </p>
+                            <img class="post-photo" src="${p.entry.image[0]}" 
+                                onerror="if (this.src != 'Frontend Developer Project Assets/no-post-image.png') 
+                                this.src = 'Frontend Developer Project Assets/no-post-image.png';" alt="post-media">
+                            <!--<span class="statistics">
+                                <a href="#">
+                                    like comment share
+                                </a>
+                            </span>-->
                         </div>
                 </div>
             `
