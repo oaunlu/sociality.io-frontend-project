@@ -25,7 +25,7 @@ fetch('../data/data.json')
                      + json_date.toLocaleTimeString('en-GB', {hour: 'numeric', minute: 'numeric'})
             return `
                 <div class="post">
-                    <div class="social-media">
+                    <div class="social-media" style="${statusTemplate(p)}">
                         <img class="social-media-img" src="${socialMediaTemplate(p)}">
                     </div>
                         <div class="post-inside">
@@ -60,6 +60,23 @@ fetch('../data/data.json')
                 return "Frontend Developer Project Assets/instagram.png"
             else
                 return ""
+        }
+
+        function statusTemplate(p){
+            switch(p.status){
+                case 0:
+                    return "background-color: #f7bf38"
+                case 1:
+                    return "background-color: #3ac183"
+                case 2:
+                    return "background-color: #67b1f2"
+                case 3:
+                    return "background-color: #acacac"
+                case 4:
+                    return "background-color: #fb6450"
+                default:
+                    return "background-color: #444444"
+            }
         }
 
         document.getElementById("app").innerHTML = `

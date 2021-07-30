@@ -155,3 +155,25 @@ span{
     width: 280px;
     height: 240px;
 }
+.dot{
+  height: 0.1%;
+  width: 0.1%;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+#gray{
+    background-color: #acacac;
+}
+#green{
+    background-color: #3ac183;
+}
+#yellow{
+    background-color: #f7bf38;
+}
+#red{
+    background-color: #fb6450;
+}
+#blue{
+    background-color: #67b1f2;
+}
