@@ -26,17 +26,19 @@ span{
     font-weight: lighter;
     padding: 15px;
 }
+
 #side-bar{
     margin: 0;
     padding-left: 0;
     padding-top: 0;
     padding-right: 0;
     position: fixed;
-    width: 50px;
+    width: 0;
     height: 100%;
     background-color: #393D42;
     transition: 0.5s;
 }
+
 #side-top{
     background-color: #31363b;
     margin: 0;
@@ -46,38 +48,79 @@ span{
     margin-left: auto;
     margin-right: auto;
 }
+#side-bar .closebtn {
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-top: 10px;
+  }
 .side-bar-element{
+    float: left;
     margin: 0;
     font-size: 14px;
     background-color: #393D42;
     color: white;
     text-align: center;
 }
+
 #side-bar #side-side-bar{
     margin: 0;
     padding-left: 0;
     padding-top: 0;
+    padding-right: 0;
     position: fixed;
     width: 0px;
     height: 100%;
     background-color: #2A2F33;
     transition: 0.5s;
 }
-#side-bar:hover{
-    width: 275px;
-    
+#side-bar ul{
+    margin-left: 30px;
 }
-#side-bar #side-side-bar:hover{
-    width: 50px;
+#side-bar ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+#side-bar ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    text-align: center;
+}
+#side-bar ul li a .side-bar-element .icon{
+    position: relative;
+    display: inline;
+}
+#side-bar ul li a .side-bar-element .side-elem-title{
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+}
+#side-bar #side-side-bar ul{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+}
+#side-bar #side-side-bar ul li{
+    padding: 10px;
 }
 #top-bar{
     transition: 0.5s;
     padding-top: 25px;
-    padding-left: 35px;
+    padding-left: 5px;
     padding-right: 50px;
     padding-bottom: 0;
     margin: 0%;
-    margin-left: 50px;
+    margin-left: 0;
     color: #444444;
     font-size: 14px;
 }
@@ -87,30 +130,33 @@ span{
     width: 50px;
     height: 50px;
 }
+
 #app{
     transition: margin-left .5s;
     margin: 0;
-    margin-left: 50px;
+    margin-left: 0;
     padding-top: 0;
-    padding-left: 20px;
+    padding-left: 55px;
     padding-right: 50px;
     vertical-align: middle;
     font-size: 22px;
-    /* font-family: "BarlowSemiCondensed"; */
     color: #959595;
 }
+
 .sort-by-date{
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
 }
+
 .post-list{
     display: flex;
     align-items: flex-start;
     margin: 0;
     padding: 0;
 }
+
 .post{
     display: flex;
     flex: auto;
@@ -124,6 +170,7 @@ span{
     border-color: #e5e6ee;
     background-color: #FFF;
 }
+
 .social-media{
     position: static;
     height: auto;
@@ -144,6 +191,7 @@ span{
     margin-top: auto;
     margin-bottom: auto;
 }
+
 .post-inside{
     margin: 0;
     padding: 20px;
@@ -157,6 +205,12 @@ span{
 .post-photo{
     width: 280px;
     height: 240px;
+}
+#states{
+    transition: margin-left .5s;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
 }
 .dot{
     margin-top: 10px;

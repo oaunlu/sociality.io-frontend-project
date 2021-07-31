@@ -12,23 +12,55 @@
         <div id="side-bar">
             <div id="side-top">
                 <img id="side-top-logo" src="Frontend Developer Project Assets/Sociality-logo.png" alt="sociality.io">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             </div>
             <div id="side-side-bar">
-            
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="Frontend Developer Project Assets/Logo1.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="Frontend Developer Project Assets/Logo2.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="Frontend Developer Project Assets/Logo3.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="Frontend Developer Project Assets/Logo4.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="Frontend Developer Project Assets/Logo5.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="Frontend Developer Project Assets/Logo6.png">
+                    </a>
+                </li>
+            </ul>
             </div>
             <ul>
                 <li>
                     <a href="#">
                         <div class="side-bar-element">
-                            <img src="Frontend Developer Project Assets/Icon1.png">
-                            NOTIFICATIONS
+                            <img src="Frontend Developer Project Assets/Icon1.png" class="icon">
+                            <span class="side-elem-title">NOTIFICATIONS</span>
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <div class="side-bar-element">
-                            <img src="Frontend Developer Project Assets/Icon2.png">
+                            <img src="Frontend Developer Project Assets/Icon2.png" class="icon">
                             SUMMARY
                         </div>
                     </a>
@@ -36,7 +68,7 @@
                 <li>
                     <a href="#">
                         <div class="side-bar-element">
-                            <img src="Frontend Developer Project Assets/Icon3.png">
+                            <img src="Frontend Developer Project Assets/Icon3.png" class="icon">
                             PUBLISH
                         </div>
                     </a>
@@ -44,7 +76,7 @@
                 <li>
                     <a href="#">
                         <div class="side-bar-element">
-                            <img src="Frontend Developer Project Assets/Icon4.png">
+                            <img src="Frontend Developer Project Assets/Icon4.png" class="icon">
                             ENGAGE
                         </div>
                     </a>
@@ -52,7 +84,7 @@
                 <li>
                     <a href="#">
                         <div class="side-bar-element">
-                            <img src="Frontend Developer Project Assets/Icon5.png">
+                            <img src="Frontend Developer Project Assets/Icon5.png" class="icon">
                             LISTEN
                         </div>
                     </a>
@@ -60,7 +92,7 @@
                 <li>
                     <a href="#">
                         <div class="side-bar-element">
-                            <img src="Frontend Developer Project Assets/Icon6.png">
+                            <img src="Frontend Developer Project Assets/Icon6.png" class="icon">
                             REPORT
                         </div>
                     </a>
@@ -68,11 +100,31 @@
             </ul>
         </div>
         <div id="top-bar">
-            <span class="dot" id="gray"></span>Published <span class="dot" id="green"></span>Scheduled 
-            <span class="dot" id="yellow"></span>Need Approval <span class="dot" id="red"></span>Error <span class="dot" id="blue"></span>Notes
-            <img id="profile-photo" src="/Frontend Developer Project Assets/Orkun.jpg" alt="profile-photo">
+            <span style="font-size:30px;cursor:pointer" class="openbtn" onclick="openNav()">&#9776; </span>
+            <span id="states">
+                <span class="dot" id="gray"></span>Published <span class="dot" id="green"></span>Scheduled 
+                <span class="dot" id="yellow"></span>Need Approval <span class="dot" id="red"></span>Error <span class="dot" id="blue"></span>Notes
+            </span>
+            <img id="profile-photo" src="/Frontend Developer Project Assets/Picture.png" alt="profile-photo">
         </div>
         <div id="app"></div>
+        <script>
+            function openNav() {
+              document.getElementById("side-bar").style.width = "300px";
+              document.getElementById("side-side-bar").style.width = "60px";
+              document.getElementById("top-bar").style.marginLeft = "250px";
+              document.getElementById("app").style.marginLeft = "300px";
+              document.getElementById("states").style.marginLeft = "50px";
+            }
+            
+            function closeNav() {
+              document.getElementById("side-bar").style.width = "0";
+              document.getElementById("side-side-bar").style.width = "0";
+              document.getElementById("top-bar").style.marginLeft= "0";
+              document.getElementById("app").style.marginLeft= "0";
+              document.getElementById("states").style.marginLeft = "0";
+            }
+            </script>
         <script src="/script/main.js"></script>
     </body>
 </html>

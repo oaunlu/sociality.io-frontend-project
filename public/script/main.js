@@ -27,24 +27,38 @@ fetch('../data/data.json')
                         <img class="social-media-img" src="${socialMediaTemplate(p)}">
                     </div>
                         <div class="post-inside">
-                            <!--<span class="actions">
-                                <a href="#">
-                                    delete more
-                                </a>
-                            </span>-->
-                            <p>
+                            <span style="padding-left: 0; font-size: 14px; font-weight: lighter">
                                 ${date}
-                                <br/>
+                                <span class="actions">
+                                    <a href="#" class="options" style="float: right">
+                                        <img src="Frontend Developer Project Assets/options.png">
+                                    </a>
+                                    <a href="#" class="delete" style="float: right">
+                                        <img src="Frontend Developer Project Assets/delete.png">
+                                    </a>
+                                </span>
+                            </span>
+                            <br/>
+                            <p>
                                 ${p.entry.message.includes("http") ? postTextTemplate(p) : p.entry.message}
                             </p>
                             <img class="post-photo" src="${p.entry.image[0]}" 
                                 onerror="if (this.src != 'Frontend Developer Project Assets/no-post-image.png') 
                                 this.src = 'Frontend Developer Project Assets/no-post-image.png';" alt="post-media">
-                            <!--<span class="statistics">
-                                <a href="#">
-                                    like comment share
+                            <span class="statistics">
+                                <a href="#" class="likes">
+                                    <img src="Frontend Developer Project Assets/likes.png">
                                 </a>
-                            </span>-->
+                                <a href="#" class="comments">
+                                    <img src="Frontend Developer Project Assets/comments.png">
+                                </a>
+                                <a href="#" class="shares">
+                                    <img src="Frontend Developer Project Assets/shares.png">
+                                </a>
+                                <a href="#" class="views">
+                                    <img src="Frontend Developer Project Assets/views.png">
+                                </a>
+                            </span>
                         </div>
                 </div>
             `
